@@ -18,7 +18,8 @@
   ],
   "files": [
     "bin/",
-    "src/"
+    "src/",
+    "README.md"
   ],
   "repository": {
     "type": "git",
