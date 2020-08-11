@@ -12,12 +12,10 @@ function searchType(answers, input) {
 }
 
 function getScopes() {
-    const ls = spawn.exec("git log | grep -Po '(?<=\\().*(?=\\))' | sort -u");
+    const ls = spawn.exec("git log --oneline | grep -Po '(?<=\\()[^\\)]*?(?=\\):)' | sort -u");
 
     ls.stdout.on('data', (data) => {
-        data = data.split(/\r?\n/);
-        scopes = data;
-        console.log(`stdout: ${data[0]}`);
+        scopes = data.trim().split(/\r?\n/);
     });
 }
 
@@ -80,7 +78,6 @@ function buildCommitCommand(options) {
 }
 
 function execCommit(message) {
-    console.log(message);
     const res = spawn.exec(`git commit -m "${message}"`);
     res.stdout.on('data', (data) => {
         console.log(data);
