@@ -1,0 +1,60 @@
+{
+  "_from": "@lucabuening/3cli",
+  "_id": "@lucabuening/3cli@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-AH0S744BDLGQNHp/j1SWGBOc78Q4x25T403oBnriVKBY0NYYhNAM720P8HI6P3SAPGmyLp1xCAGzZOvxHYCC4Q==",
+  "_location": "/@lucabuening/3cli",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@lucabuening/3cli",
+    "name": "@lucabuening/3cli",
+    "escapedName": "@lucabuening%2f3cli",
+    "scope": "@lucabuening",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://repository.lvm.de/nexus/repository/npm-all/@lucabuening/3cli/-/3cli-0.0.1.tgz",
+  "_shasum": "52210ecf8cdf0808c3642fd907b7ca88a6ea822b",
+  "_spec": "@lucabuening/3cli",
+  "_where": "/home/m500092",
+  "author": {
+    "name": "Luca Büning"
+  },
+  "bin": {
+    "3cli": "bin/create-project"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "arg": "^4.1.3",
+    "esm": "^3.2.25",
+    "inquirer": "^7.3.3",
+    "inquirer-autocomplete-prompt": "^1.0.2"
+  },
+  "deprecated": false,
+  "description": "Simple CLI for Conventional Commits",
+  "devDependencies": {},
+  "files": [
+    "bin/",
+    "src/"
+  ],
+  "keywords": [
+    "cli",
+    "create-project"
+  ],
+  "license": "ISC",
+  "main": "src/index.js",
+  "name": "@lucabuening/3cli",
+  "publishConfig": {
+    "accsess": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.1"
+}
