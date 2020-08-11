@@ -1,6 +1,6 @@
 {
   "name": "@lucabuening/3cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple nodejs based CLI to help create Conventional Commits.",
   "main": "src/index.js",
   "bin": {
