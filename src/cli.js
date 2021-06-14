@@ -12,10 +12,11 @@ function searchType(answers, input) {
 }
 
 function getScopes() {
-    const ls = spawn.exec("git log --oneline | grep -Po '(?<=\\()[^\\)]*?(?=\\):)' | sort -u");
+    const ls = spawn.exec("git --no-pager log --oneline");
 
     ls.stdout.on('data', (data) => {
-        scopes = data.trim().split(/\r?\n/);
+        scopes.push(...data.match(/\(.*?\)/ig).map(e => e.slice(1, -1)));
+        console.log(scopes);
     });
 }
 
@@ -28,6 +29,7 @@ function searchScopes(answers, input) {
 
 async function promt() {
     inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
+
     return await inquirer
         .prompt([
             {
