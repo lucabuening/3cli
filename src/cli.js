@@ -16,6 +16,7 @@ function getScopes() {
 
     ls.stdout.on('data', (data) => {
         scopes.push(...data.match(/\(.*?\)/ig).map(e => e.slice(1, -1)));
+        scopes = [... new Set(scopes)]
     });
 }
 
